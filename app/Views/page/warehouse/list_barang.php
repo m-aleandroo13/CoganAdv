@@ -20,6 +20,7 @@ Cogan Cafe - List Barang
                             <th scope="col">No</th>
                             <th scope="col">Barang</th>
                             <th scope="col">Stock</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,6 +32,12 @@ Cogan Cafe - List Barang
                                 <th scope="row"><?= $i; ?></th>
                                 <td><?= $b['nama_barang']; ?></td>
                                 <td><?= $b['stok_barang']; ?></td>
+                                <td><a class="btn btn-primary" href="<?= base_url('barang/hal_edit') . '/' . $b['id_barang'] ?>">Edit</a>
+                                    <form action="<?= '/barang/delete/' . $b['id_barang']; ?>" style="display: inline-block;">
+                                        <input type="hidden" name="_method" value="DELETE" ?>
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin mau hapus?');">Hapus</button>
+                                    </form>
+                                </td>
                             </tr>
                     </tbody>
                 <?php

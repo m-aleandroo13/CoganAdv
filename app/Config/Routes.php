@@ -57,6 +57,9 @@ $routes->get('/supplier/detail/(:any)', 'Supplier::detail_supplier/$1');
 $routes->get('/barang/hal_list_barang', 'Barang::hal_list_barang/$1');
 $routes->get('/barang/hal_tambah_barang', 'Barang::hal_tambah_barang/$1');
 $routes->get('/barang/insert', 'Barang::insert_barang');
+$routes->get('/barang/hal_edit/(:any)', 'Barang::hal_edit/$1');
+$routes->post('/barang/edit', 'Barang::edit');
+$routes->delete('/barang/(:num)', 'Barang::delete/$1');
 
 
 /* ROUTE UNTUK PROSES PRODUK */
@@ -65,7 +68,7 @@ $routes->get('/produk/hal_tambah_produk', 'Produk::hal_tambah_produk/$1');
 $routes->get('/produk/insert', 'Produk::insert_produk');
 $routes->get('/produk/detail/(:any)', 'Produk::detail_produk/$1');
 $routes->get('/produk/hal_tambah_barang_produk/(:any)', 'Produk::hal_tambah_barang_produk/$1');
-$routes->get('/produk/insert_barang_produk/(:any)', 'Produk::insert_barang_produk/$1');
+$routes->post('/produk/insert_barang_produk/(:any)', 'Produk::insert_barang_produk/$1');
 
 /**
  * --------------------------------------------------------------------

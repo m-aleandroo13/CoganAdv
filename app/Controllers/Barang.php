@@ -32,10 +32,8 @@ class Barang extends BaseController
 
     public function hal_list_barang()
     {
-        $session = session();
-        $data = $session->get('nama');
+
         $data_arr = [
-            'login_sess' =>    $data,
             'barang' => $this->barangModel->getBarang()
         ];
         return view('page/warehouse/list_barang', $data_arr);
@@ -43,11 +41,31 @@ class Barang extends BaseController
 
     public function hal_tambah_barang()
     {
-        $session = session();
-        $data = $session->get('nama');
+        return view('page/warehouse/tambah_barang');
+    }
+    public function hal_edit($id_barang)
+    {
         $data_arr = [
-            'login_sess' =>    $data
+            'barang' => $this->barangModel->getBarang($id_barang)
         ];
-        return view('page/warehouse/tambah_barang', $data_arr);
+        return view('page/warehouse/edit_barang', $data_arr);
+    }
+    public function edit()
+    {
+        $id_barang = $this->request->getVar('id_barang');
+        $data_arr = [
+            'nama_barang' => $this->request->getVar('nama_barang'),
+            'stok_barang' => $this->request->getVar('stok_barang')
+        ];
+
+        $this->barangModel->update($id_barang, $data_arr);
+        session()->setFlashdata('notifedit', 'Data Berhasil Diubah!');
+        return redirect()->to('hal_list_barang');
+    }
+    public function delete($id_barang)
+    {
+        $this->barangModel->where('id_barang', $id_barang)
+            ->delete('tb_barang');
+        return redirect()->to(base_url('barang/hal_list_barang'));
     }
 }

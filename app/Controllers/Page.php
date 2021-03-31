@@ -20,11 +20,6 @@ class Page extends BaseController
 		return view('page/index');
 	}
 
-	public function hal_penjualan()
-	{
-		return view('page/transaksi/penjualan');
-	}
-
 	public function hal_pembelian()
 	{
 		return view('page/transaksi/pembelian');

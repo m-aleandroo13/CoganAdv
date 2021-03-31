@@ -23,7 +23,7 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="<?= route_to('register') ?>">User Account</a>
+                    <a class="dropdown-item" href="<?= route_to('register') ?>">Add Account</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/logout">Logout</a>
                 </div>
@@ -41,7 +41,7 @@
                             Dashboard
                         </a>
                         <div class="sb-sidenav-menu-heading">Transaksi</div>
-                        <a class="nav-link" href="<?= base_url('admin/hal_penjualan'); ?>">
+                        <a class="nav-link" href="<?= base_url('penjualan/hal_penjualan'); ?>">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Penjualan
                         </a>

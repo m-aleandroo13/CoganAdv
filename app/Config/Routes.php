@@ -37,7 +37,6 @@ $routes->get('/', 'Page::index');
 
 /* ROUTE PER-PAGE */
 $routes->get('/admin', 'Page::admin');
-$routes->get('/admin/hal_penjualan', 'Page::hal_penjualan/$1');
 $routes->get('/admin/hal_pembelian', 'Page::hal_pembelian/$1');
 $routes->get('/admin/hal_catatan_pembelian', 'Page::hal_catatan_pembelian/$1');
 $routes->get('/admin/hal_catatan_penjualan', 'Page::hal_catatan_penjualan/$1');
@@ -69,6 +68,13 @@ $routes->get('/produk/insert', 'Produk::insert_produk');
 $routes->get('/produk/detail/(:any)', 'Produk::detail_produk/$1');
 $routes->get('/produk/hal_tambah_barang_produk/(:any)', 'Produk::hal_tambah_barang_produk/$1');
 $routes->post('/produk/insert_barang_produk/(:any)', 'Produk::insert_barang_produk/$1');
+
+
+/* ROUTE UNTUK PROSES PENJUALAN */
+$routes->get('/penjualan/hal_penjualan', 'Penjualan::hal_penjualan/$1');
+$routes->post('/penjualan/insert_cart_penjualan', 'Penjualan::insert_cart_penjualan');
+$routes->get('/penjualan/delete_cart/(:any)', 'Penjualan::delete_cart/$1');
+
 
 /**
  * --------------------------------------------------------------------

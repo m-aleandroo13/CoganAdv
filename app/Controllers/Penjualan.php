@@ -65,6 +65,20 @@ class Penjualan extends BaseController
             return redirect()->to('hal_penjualan');
         }
     }
+
+    public function insert_penjualan()
+    {
+        echo "idproduk: " . $id_produk = $this->request->getVar('id_produk') . "<br>";
+        echo "tgl: " . $tgl = $this->request->getVar('tgl') . "<br>";
+        echo "tanggal: " . $tanggal = substr(($tgl), 8, 2) . "<br>";
+        echo "bln: " . $bulan = substr(($tgl), 5, 2) . "<br>";
+        echo "thn: " . $tahun = substr(($tgl), 0, 4) . "<br>";
+        echo "cek selesai: " . $cek_Selesai = substr(($tgl), 0, 7) . "<br>";
+        echo "now: " . $sekarang = date('Y-m') . "<br>";
+
+        echo $this->penjualanModel->getbill($tahun, $bulan);
+    }
+
     public function delete_cart($id_cart_pj)
     {
         $this->penjualanCartModel->where('id_cart_pj', $id_cart_pj)

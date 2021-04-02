@@ -74,6 +74,7 @@ $routes->post('/produk/insert_barang_produk/(:any)', 'Produk::insert_barang_prod
 $routes->get('/penjualan/hal_penjualan', 'Penjualan::hal_penjualan/$1');
 $routes->post('/penjualan/insert_cart_penjualan', 'Penjualan::insert_cart_penjualan');
 $routes->get('/penjualan/delete_cart/(:any)', 'Penjualan::delete_cart/$1');
+$routes->post('/penjualan/insert_penjualan', 'Penjualan::insert_penjualan');
 
 
 /**

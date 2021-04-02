@@ -18,4 +18,12 @@ class PenjualanModel extends Model
 
         return $this->where('id_penjualan', $id_penjualan)->first();
     }
+
+    public function getbill($tahun, $bulan)
+    {
+        $query = $this->db->query("SELECT substr((max(id_bill)), 13, 3) as maxKode1 FROM tb_penjualan WHERE pj_tahun='$tahun' AND pj_bulan='$bulan'");
+        foreach ($query->result_array() as $row) {
+            return $row['maxKode1'];
+        }
+    }
 }

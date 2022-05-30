@@ -14,7 +14,7 @@ Cogan Cafe - List Supplier
         <div class="col">
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover table-dark" id="dataTable">
+                    <table class="table table-hover table-light" id="dataTable">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>

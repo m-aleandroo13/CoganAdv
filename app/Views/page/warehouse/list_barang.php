@@ -14,7 +14,7 @@ Cogan Cafe - List Barang
     <div class="row">
         <div class="col">
             <div class="table-responsive">
-                <table class="table table-dark" id="dataTable">
+                <table class="table table-striped table-dark" id="dataTable">
                     <thead>
                         <tr>
                             <th scope="col">No</th>

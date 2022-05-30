@@ -23,7 +23,7 @@ Cogan Cafe - Insert Barang Produk
                         <?= csrf_field(); ?>
                         <div class="form-group">
                             <label class="small mb-1" for="inputNamaBarang">Nama Barang</label>
-                            <select class="custom-select" name="id_barang" id="id_barang">
+                            <select class="custom-select" name="id_barang" id="id_barang" required>
                                 <option value="">Pilih Barang</option>
                                 <?php foreach ($barang as $b) : ?>
                                     <option value="<?= $b['id_barang']; ?>"><?= $b['nama_barang']; ?></option>

@@ -14,10 +14,9 @@ Cogan Cafe - List Supplier
         <div class="col">
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover table-light" id="dataTable">
+                    <table class="table table-striped" id="dataTable">
                         <thead>
                             <tr>
-                                <th scope="col">No</th>
                                 <th scope="col">Supplier</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">No. Telp</th>
@@ -27,11 +26,9 @@ Cogan Cafe - List Supplier
                         </thead>
                         <tbody>
                             <?php
-                            $i = 1;
                             foreach ($supplier as $s) :
                             ?>
                                 <tr class='clickable-row' onclick="window.location='<?= '/supplier/detail/' . $s['id_supplier']; ?>';">
-                                    <th scope="row"><?= $i; ?></th>
                                     <td><?= $s['nama_supplier']; ?></td>
                                     <td><?= $s['alamat_supplier']; ?></td>
                                     <td><?= $s['telp_supplier']; ?></td>
@@ -39,7 +36,6 @@ Cogan Cafe - List Supplier
                                     <td><a href="<?= $s['link_catalog_supplier']; ?>"><?= $s['link_catalog_supplier']; ?></a></td>
                                 </tr>
                             <?php
-                                $i++;
                             endforeach;
                             ?>
                         </tbody>

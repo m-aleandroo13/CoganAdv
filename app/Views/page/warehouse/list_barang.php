@@ -17,7 +17,6 @@ Cogan Cafe - List Barang
                 <table class="table table-striped table-dark" id="dataTable">
                     <thead>
                         <tr>
-                            <th scope="col">No</th>
                             <th scope="col">Barang</th>
                             <th scope="col">Stock</th>
                             <th scope="col">Action</th>
@@ -25,11 +24,9 @@ Cogan Cafe - List Barang
                     </thead>
                     <tbody>
                         <?php
-                        $i = 1;
                         foreach ($barang as $b) :
                         ?>
                             <tr>
-                                <th scope="row"><?= $i; ?></th>
                                 <td><?= $b['nama_barang']; ?></td>
                                 <td><?= $b['stok_barang']; ?></td>
                                 <td><a class="btn btn-primary" href="<?= base_url('barang/hal_edit') . '/' . $b['id_barang'] ?>">Edit</a>
@@ -41,7 +38,6 @@ Cogan Cafe - List Barang
                             </tr>
                     </tbody>
                 <?php
-                            $i++;
                         endforeach;
                 ?>
                 </table>

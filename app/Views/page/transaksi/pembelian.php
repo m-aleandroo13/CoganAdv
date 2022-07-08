@@ -30,7 +30,7 @@ Cogan Cafe - Pembelian
                         <div id="barang">
                             <div class="form-group">
                                 <label class="small mb-1" for="inputNamaBarang">Nama Barang</label>
-                                <select class="custom-select" name="id_barang" id="barang">
+                                <select class="custom-select" name="id_barang">
                                     <option value="">Pilih Barang</option>
                                     <?php foreach ($barang as $p) : ?>
                                         <option value="<?= $p['id_barang']; ?>"><?= $p['nama_barang']; ?></option>
@@ -41,6 +41,7 @@ Cogan Cafe - Pembelian
                                 <label class="small mb-1" for="inputJumlahpembelian">Jumlah</label>
                                 <input type="number" class="form-control" name="jumlah" id="jumlah" placeholder="Jumlah Barang">
                             </div>
+                            <input id="idSupp" type="text">
                         </div>
 
                         <button type="submit" class="btn btn-success">Add Cart</button>
@@ -105,7 +106,8 @@ Cogan Cafe - Pembelian
     </div>
     <script>
         function displayDivDemo(id, elementValue) {
-            document.getElementById(id).style.display = "visible";
+            document.getElementById(id).style.display = "block";
+            document.getElementById("idSupp").value = elementValue.value;
         }
     </script>
     <script>

@@ -43,7 +43,7 @@ Cogan Cafe - Detail Supplier
             </ol>
             <div class="table-responsive">
                 <a class="btn btn-primary mb-2" href="<?= base_url('supplier/hal_tambah_barang_supplier'); ?>/<?= $supplier['id_supplier']; ?>"> Insert Barang</a>
-                <table class="table table-dark myTable" id="dataTable">
+                <table id="table-datatables" class="table table-dark">
                     <thead>
                         <tr>
                             <th scope="col">No</th>

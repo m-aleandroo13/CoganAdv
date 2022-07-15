@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('title'); ?>
-Cogan Cafe - List Supplier
+Lantai Dua - List Supplier
 <?= $this->endSection(); ?>
 
 <?= $this->section('content'); ?>
@@ -10,6 +10,10 @@ Cogan Cafe - List Supplier
     <ol class="breadcrumb my-2">
         <li class="breadcrumb-item active">Data/Supplier/List Supplier</li>
     </ol>
+    <form action="<?= base_url('supplier/hal_tambah_supplier'); ?>">
+        <?= csrf_field(); ?>
+        <div class="form-group mt-4 mb-4"><button type="submit" class="btn btn-success">Tambah Supplier</button></div>
+    </form>
     <div class="row">
         <div class="col">
             <div class="card-body">
@@ -22,7 +26,7 @@ Cogan Cafe - List Supplier
                                 <th scope="col">Alamat</th>
                                 <th scope="col">No. Telp</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Catalog</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -36,7 +40,7 @@ Cogan Cafe - List Supplier
                                     <td><?= $s['alamat_supplier']; ?></td>
                                     <td><?= $s['telp_supplier']; ?></td>
                                     <td><?= $s['email_supplier']; ?></td>
-                                    <td><a href="<?= $s['link_catalog_supplier']; ?>"><?= $s['link_catalog_supplier']; ?></a></td>
+
                                 </tr>
                             <?php
                                 $i++;

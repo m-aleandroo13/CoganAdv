@@ -246,7 +246,7 @@ iframe {
   background-size: cover;
   background-position: center;
 
-  padding: 70px 15px 74px 15px;
+  padding: 150px 15px 80px 15px;
 }
 
 .login100-form-title-1 {
@@ -267,7 +267,7 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(54, 84, 99, 0.7);
+  /* background-color: rgba(54, 84, 99, 0.7); */
 }
 
 /*==================================================================
@@ -344,7 +344,7 @@ iframe {
   -moz-transition: all 0.6s;
   transition: all 0.6s;
 
-  background: #57b846;
+  background: #39e650;
 }
 
 /*---------------------------------------------*/

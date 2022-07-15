@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('title'); ?>
-Cogan Cafe - List Barang
+Lantai Dua - List Bahan Baku
 <?= $this->endSection(); ?>
 
 
@@ -9,8 +9,12 @@ Cogan Cafe - List Barang
 
 <div class="container">
     <ol class="breadcrumb my-2">
-        <li class="breadcrumb-item active">Warehouse/Barang/List Barang</li>
+        <li class="breadcrumb-item active">Warehouse/Bahan Baku/List Bahan Baku</li>
     </ol>
+    <form action="<?= base_url('barang/hal_tambah_barang'); ?>">
+        <?= csrf_field(); ?>
+        <div class="form-group mt-4 mb-4"><button type="submit" class="btn btn-outline-success">Tambah Bahan Baku</button></div>
+    </form>
     <div class="row">
         <div class="col">
             <div class="table-responsive">
@@ -18,7 +22,7 @@ Cogan Cafe - List Barang
                     <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Barang</th>
+                            <th scope="col">Bahan Baku</th>
                             <th scope="col">Stock</th>
                             <th scope="col">Action</th>
                         </tr>
@@ -32,10 +36,10 @@ Cogan Cafe - List Barang
                                 <th scope="row"><?= $i; ?></th>
                                 <td><?= $b['nama_barang']; ?></td>
                                 <td><?= $b['stok_barang']; ?></td>
-                                <td><a class="btn btn-primary" href="<?= base_url('barang/hal_edit') . '/' . $b['id_barang'] ?>">Edit</a>
+                                <td><a class="btn btn-outline-warning" href="<?= base_url('barang/hal_edit') . '/' . $b['id_barang'] ?>">Edit</a>
                                     <form action="<?= '/barang/delete/' . $b['id_barang']; ?>" style="display: inline-block;">
                                         <input type="hidden" name="_method" value="DELETE" ?>
-                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Yakin mau hapus?');">Hapus</button>
+                                        <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Yakin mau hapus?');">Hapus</button>
                                     </form>
                                 </td>
                             </tr>

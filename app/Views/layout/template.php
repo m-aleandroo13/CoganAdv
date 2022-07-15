@@ -15,7 +15,7 @@
 
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="<?= base_url('admin'); ?>">Cogan ADV</a>
+        <a class="navbar-brand" href="<?= base_url('admin'); ?>">Lantai Dua</a>
         <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
 
         <!-- Navbar-->
@@ -47,32 +47,17 @@
                         </a>
                         <a class="nav-link" href="<?= base_url('admin/hal_pembelian'); ?>">
                             <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
-                            Pembelian Barang
+                            Pembelian
                         </a>
                         <div class="sb-sidenav-menu-heading">Warehouse</div>
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBarang" aria-expanded="false" aria-controls="collapseBarang">
-                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                            Barang
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        <a class="nav-link" href="<?= base_url('barang/hal_list_barang'); ?>">
+                            <div class="sb-nav-link-icon"><i class="fas fa-clipboard-list"></i></div>
+                            Bahan Baku
                         </a>
-                        <div class="collapse" id="collapseBarang" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?= base_url('barang/hal_list_barang'); ?>">List Barang</a>
-                                <a class="nav-link" href="<?= base_url('barang/hal_tambah_barang'); ?>">Input Barang</a>
-                            </nav>
-                        </div>
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduk" aria-expanded="false" aria-controls="collapseProduk">
-                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                            Produk
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        <a class="nav-link" href="<?= base_url('produk/hal_list_produk'); ?>">
+                            <div class="sb-nav-link-icon"><i class="fas fa-file-signature"></i></div>
+                            Bill Of Material
                         </a>
-                        <div class="collapse" id="collapseProduk" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?= base_url('produk/hal_list_produk'); ?>">List Produk</a>
-                                <a class="nav-link" href="<?= base_url('produk/hal_tambah_produk'); ?>">Input Produk</a>
-                            </nav>
-                        </div>
-
                         <div class="sb-sidenav-menu-heading">Data</div>
                         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTransaksi" aria-expanded="false" aria-controls="collapseTransaksi">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -96,23 +81,18 @@
                                 <a class="nav-link" href="#">Laporan Pembelian</a>
                             </nav>
                         </div>
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSupplier" aria-expanded="false" aria-controls="collapseSupplier">
+                        <a class="nav-link" href="<?= base_url('supplier/hal_list_supplier'); ?>">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             Supplier
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+
                         </a>
-                        <div class="collapse" id="collapseSupplier" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?= base_url('supplier/hal_list_supplier'); ?>">List Supplier</a>
-                                <a class="nav-link" href="<?= base_url('supplier/hal_tambah_supplier'); ?>">Insert Supplier</a>
-                            </nav>
-                        </div>
+
 
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    <?= user()->fullname; ?>
+                    <?= user()->username; ?>
                 </div>
             </nav>
         </div>
@@ -123,7 +103,7 @@
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; &middot; Muhammad Aleandro 2021</div>
+
 
                     </div>
                 </div>

@@ -12,7 +12,7 @@ class Page extends BaseController
 	}
 	public function index()
 	{
-		return view('Cust/index');
+		return view('auth/login');
 	}
 
 	public function admin()

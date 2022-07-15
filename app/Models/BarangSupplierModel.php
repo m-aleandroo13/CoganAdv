@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class BarangSupplierModel extends Model
 {
-    protected $allowedFields = ['id_barang', 'id_supplier', 'harga_barang', 'link_barang'];
+    protected $allowedFields = ['id_barang', 'id_supplier', 'harga_barang'];
     protected $table      = 'tb_barang_supplier';
     public function getBarangSupplier($id_supplier)
     {

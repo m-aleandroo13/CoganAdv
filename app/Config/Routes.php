@@ -35,6 +35,7 @@ $routes->setAutoRoute(true);
 // ROUTE USER
 $routes->get('/', 'Page::index');
 
+
 /* ROUTE PER-PAGE */
 $routes->get('/admin', 'Page::admin');
 $routes->get('/admin/hal_pembelian', 'Page::hal_pembelian/$1');
@@ -42,6 +43,7 @@ $routes->get('/admin/hal_catatan_pembelian', 'Page::hal_catatan_pembelian/$1');
 $routes->get('/admin/hal_catatan_penjualan', 'Page::hal_catatan_penjualan/$1');
 
 $routes->get('/admin/hal_user_data', 'Page::hal_user_data/$1');
+
 
 
 /* ROUTE UNTUK PROSES SUPPLIER */
@@ -66,6 +68,7 @@ $routes->get('/produk/hal_list_produk', 'Produk::hal_list_produk/$1');
 $routes->get('/produk/hal_tambah_produk', 'Produk::hal_tambah_produk/$1');
 $routes->get('/produk/insert', 'Produk::insert_produk');
 $routes->get('/produk/detail/(:any)', 'Produk::detail_produk/$1');
+$routes->get('/produk/hal_edit_barang_produk/(:any)', 'Produk::hal_edit_barang_produk/$1');
 $routes->get('/produk/hal_tambah_barang_produk/(:any)', 'Produk::hal_tambah_barang_produk/$1');
 $routes->post('/produk/insert_barang_produk/(:any)', 'Produk::insert_barang_produk/$1');
 
@@ -75,6 +78,12 @@ $routes->get('/penjualan/hal_penjualan', 'Penjualan::hal_penjualan/$1');
 $routes->post('/penjualan/insert_cart_penjualan', 'Penjualan::insert_cart_penjualan');
 $routes->get('/penjualan/delete_cart/(:any)', 'Penjualan::delete_cart/$1');
 $routes->post('/penjualan/insert_penjualan', 'Penjualan::insert_penjualan');
+
+/* ROUTE UNTUK PROSES PEMBELIAN */
+$routes->get('/pembelian/hal_pembelian', 'Pembelian::hal_pembelian/$1');
+$routes->post('/pembelian/insert_cart_pembelian', 'Pembelian::insert_cart_pembelian');
+$routes->get('/pembelian/delete_cart/(:any)', 'Pembelian::delete_cart/$1');
+$routes->post('/pembelian/insert_pembelian', 'Pembelian::insert_pembelian');
 
 
 /**

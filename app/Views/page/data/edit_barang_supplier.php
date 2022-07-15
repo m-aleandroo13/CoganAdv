@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('title'); ?>
-Lantai Dua - Insert Barang Supplier
+Lantai Dua - Edit Barang Supplier
 <?= $this->endSection(); ?>
 
 
@@ -9,7 +9,7 @@ Lantai Dua - Insert Barang Supplier
 
 <div class="container">
     <ol class="breadcrumb my-2">
-        Insert Barang Supplier <?= $supplier['nama_supplier']; ?>
+        Edit Barang Supplier <?= $supplier['nama_supplier']; ?>
     </ol>
     <a class="btn btn-danger" href="<?= base_url('/supplier/detail/' . $supplier['id_supplier']); ?>">Back</a>
     <div class="row">
@@ -19,7 +19,7 @@ Lantai Dua - Insert Barang Supplier
                     <h3 class="text-center font-weight-light my-2">Insert Data Barang Supplier <b><?= $supplier['nama_supplier']; ?></b></h3>
                 </div>
                 <div class="card-body mb-4">
-                    <form action="<?= base_url('supplier/insert_barang_supplier/') ?>">
+                    <form action="<?= base_url('supplier/hal_edit_barang_supplier') . '/' . $supplier['id_supplier']; ?>" method="POST">
                         <?= csrf_field(); ?>
                         <div class="form-group">
                             <label class="small mb-1" for="inputNamaBarang">Nama Barang</label>

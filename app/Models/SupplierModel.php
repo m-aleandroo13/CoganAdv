@@ -8,7 +8,7 @@ class SupplierModel extends Model
 {
     protected $table      = 'tb_supplier';
     protected $primaryKey = 'id_supplier';
-    protected $allowedFields = ['nama_supplier', 'alamat_supplier', 'telp_supplier', 'email_supplier', 'link_catalog_supplier'];
+    protected $allowedFields = ['nama_supplier', 'alamat_supplier', 'telp_supplier', 'email_supplier'];
 
     public function getSupplier($id_supplier = false)
     {

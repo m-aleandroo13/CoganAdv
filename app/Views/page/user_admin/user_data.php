@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('title'); ?>
-Cogan Cafe - User Data
+Lantai Dua - User Data
 <?= $this->endSection(); ?>
 
 <?= $this->section('userlogin'); ?>

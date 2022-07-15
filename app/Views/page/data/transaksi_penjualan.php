@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('title'); ?>
-Cogan Cafe - Catatan Transaksi Penjualan
+Lantai Dua - Catatan Transaksi Penjualan
 <?= $this->endSection(); ?>
 
 

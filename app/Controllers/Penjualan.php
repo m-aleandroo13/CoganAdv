@@ -68,15 +68,42 @@ class Penjualan extends BaseController
 
     public function insert_penjualan()
     {
-        echo "idproduk: " . $id_produk = $this->request->getVar('id_produk') . "<br>";
-        echo "tgl: " . $tgl = $this->request->getVar('tgl') . "<br>";
-        echo "tanggal: " . $tanggal = substr(($tgl), 8, 2) . "<br>";
-        echo "bln: " . $bulan = substr(($tgl), 5, 2) . "<br>";
-        echo "thn: " . $tahun = substr(($tgl), 0, 4) . "<br>";
-        echo "cek selesai: " . $cek_Selesai = substr(($tgl), 0, 7) . "<br>";
-        echo "now: " . $sekarang = date('Y-m') . "<br>";
+        $id_produk = $this->request->getVar('id_produk');
+        $jumlah_penjualan = $this->request->getVar('jumlah_penjualan');
+        $tgl = $this->request->getVar('tgl');
+        $tanggal = substr(($tgl), 8, 2);
+        $bulan = substr(($tgl), 5, 2);
+        $tahun = substr(($tgl), 0, 4);
+        $cek_Selesai = substr(($tgl), 0, 7);
+        $sekarang = date('Y-m');
 
-        echo $this->penjualanModel->getbill($tahun, $bulan);
+        $id2 = $this->penjualanModel->getbill($tahun, $bulan);
+        foreach ($id2 as $idbill) {
+            echo $idbill;
+            $idbill++;
+
+            if ($idbill < 10) {
+                $bill = "BILL-" . $bulan . $tahun . "-" . "00" . $idbill;
+            } else if ($idbill < 100) {
+                $bill = "BILL-" . $bulan . $tahun . "-" . "0" . $idbill;
+            } else {
+                $bill = "BILL-" . $bulan . $tahun . "-" . $idbill;
+            }
+        }
+        $data_arr = [
+            'id_produk' => $id_produk,
+            'id_bill' => $bill,
+            'jumlah_penjualan' => $jumlah_penjualan,
+            'pj_tanggal' => $tanggal,
+            'pj_tahun' => $tahun,
+            'pj_bulan' => $bulan,
+            'pj_laporan' => $tgl
+
+        ];
+        $this->penjualanModel->insert($data_arr);
+        $this->penjualanCartModel->emptyTable();
+        session()->setFlashdata('notifinsert', 'Pembelian Berhasil!');
+        return redirect()->to(base_url('penjualan/hal_penjualan'));
     }
 
     public function delete_cart($id_cart_pj)

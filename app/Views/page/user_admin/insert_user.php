@@ -1,7 +1,7 @@
 INSERT User<?= $this->extend('layout/template'); ?>
 
 <?= $this->section('title'); ?>
-Cogan Cafe - Insert Barang
+Lantai Dua - Insert Barang
 <?= $this->endSection(); ?>
 
 

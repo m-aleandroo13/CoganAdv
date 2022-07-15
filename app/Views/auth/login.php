@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Login V15</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="<?= base_url('images/icons/favicon.ico'); ?>" />
+    <link rel="icon" type="image/png" href="<?= base_url('images/icons/lt2icon.png'); ?>" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="<?= base_url('vendor/bootstrap/css/bootstrap.min.css'); ?>">
     <!--===============================================================================================-->
@@ -32,9 +32,9 @@
 <body>
 
     <div class="limiter">
-        <div class="container-login100" style="background-image: url(<?= base_url('images/login_background.jpg'); ?>);">
+        <div class="container-login100" style="background-image: url(<?= base_url('images/login-background.jpeg'); ?>);">
             <div class="wrap-login100">
-                <div class="login100-form-title" style="background-image: url(<?= base_url('images/bg-01.jpg'); ?>);">
+                <div class="login100-form-title" style="background-image: url(<?= base_url('images/LT2.jpg'); ?>);">
                     <span class="login100-form-title-1">
 
                     </span>
@@ -64,10 +64,7 @@
                         </button>
                     </div>
                     <div class="form-check mt-4">
-                        <label class="form-check-label">
-                            <input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
-                            <?= lang('Auth.rememberMe') ?>
-                        </label>
+
                     </div>
                 </form>
             </div>

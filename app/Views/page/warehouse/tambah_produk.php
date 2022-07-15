@@ -1,7 +1,7 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('title'); ?>
-Cogan Cafe - Insert Produk
+Lantai Dua - Insert Produk
 <?= $this->endSection(); ?>
 
 
@@ -16,13 +16,16 @@ Cogan Cafe - Insert Produk
             <div class="card shadow-lg border-0 rounded-lg mb-4">
                 <div class="card-header">
                     <h3 class="text-center font-weight-light my-2">Insert Data Produk</h3>
+                    <a href="<?= base_url('produk/hal_list_produk'); ?>" class="btn btn-danger mt-2">Batal</a>
                 </div>
                 <div class="card-body mb-4">
-                    <form action="<?= base_url('produk/insert'); ?>">
+                    <form action="<?= base_url('produk/insert_produk'); ?>" method="POST">
                         <?= csrf_field(); ?>
                         <div class="form-group">
                             <label class="small mb-1" for="inputNamaBarang">Nama Produk</label>
                             <input class="form-control py-4" name="nama_produk" id="inputNamaproduk" type="text" placeholder="Enter nama produk" required />
+                            <label class="small mb-1" for="inputHargaBarang">Harga Produk</label>
+                            <input class="form-control py-4" name="harga_produk" id="inputHargaproduk" type="text" placeholder="Masukkan harga barang" required />
                         </div>
                         <div class="form-group mt-4 mb-0"><button class="btn btn-primary btn-block">Insert</a></div>
                     </form>
